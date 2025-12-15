@@ -46,31 +46,6 @@ This project demonstrates advanced GPU programming techniques, bridging raw CUDA
     *   **Phase 3 (Global Merge)**: Vectorized 128-bit loads/stores for large-stride comparisons.
 *   **PyTorch Custom Op**: Demonstrates the industry-standard pattern for extending PyTorch with custom CUDA kernels, allowing the sort to be used directly in autograd-enabled pipelines (though this operation is non-differentiable).
 
-## ⚡ Usage (Conceptual)
-
-This library is designed to be built as a Python extension.
-
-```python
-import torch
-import turbosort_cuda  # The compiled extension name
-
-# Create a random tensor on GPU
-data = torch.randint(0, 1000, (1024 * 1024,), dtype=torch.int16, device='cuda')
-
-# Sort in-place using the custom CUDA kernel
-turbosort_cuda.sort(data)
-
-# Verify
-assert torch.equal(data, data.sort()[0])
-```
-
-### Compilation (Requires `setup.py`)
-To build the extension, a standard `setuptools` script linking the CUDA objects would be used:
-
-```bash
-python setup.py install
-```
-
 ## 🌐 Interactive Demo
 
 You can try out and verify the `TurboSort CUDA` implementation directly on a GPU using the following Google Colab notebook:
