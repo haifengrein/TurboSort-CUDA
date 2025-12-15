@@ -1,0 +1,28 @@
+# --- System & IDE Configs ---
+.DS_Store
+.claude/
+.jupyter/
+.vscode/
+.idea/
+__pycache__/
+
+# --- Notebooks (Experiments & Demos) ---
+*.ipynb
+.ipynb_checkpoints/
+
+# --- Documentation & Reports ---
+*.md
+*.html
+project_report.md
+portfolio.html
+
+# --- Data, Logs & Artifacts ---
+*.json
+*.log
+benchmark_results_final.json
+
+# --- Development & Profiling Tools ---
+# Excluding this as it is likely a dev tool, not core business logic.
+# If this is actually part of the production pipeline, remove this line.
+profile_analysis.py
+app.py
