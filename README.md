@@ -70,3 +70,11 @@ To build the extension, a standard `setuptools` script linking the CUDA objects 
 ```bash
 python setup.py install
 ```
+
+## 🌐 Interactive Demo
+
+You can try out and verify the `TurboSort CUDA` implementation directly on a GPU using the following Google Colab notebook:
+
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1pVf_3wVXn47hfvbLXMewig3FG24BWg7t?usp=sharing)
+
+The notebook includes steps for compiling the CUDA kernel and running performance benchmarks.
